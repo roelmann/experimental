@@ -2,7 +2,7 @@
 
 $THEME->name = 'experimental';
 
-$THEME->parents = array('canvas', 'base');
+$THEME->parents = array('base');
 
 $THEME->parents_exclude_sheets  = array(
     'base'=>array(
@@ -15,8 +15,8 @@ $THEME->parents_exclude_sheets  = array(
 
 $THEME->sheets = array(
     'normalise',
-    'core',
     'flex2',
+    'core',
 );
 
 $THEME->layouts = array(
@@ -128,7 +128,10 @@ $THEME->editor_sheets = array('editor');
 
 // $THEME->javascripts
 
-// $THEME->javascripts_footer
+$THEME->javascripts_footer = array(
+    'jquery-1.7.2.min',
+    'menubar',
+);
 
 // $THEME->larrow
 
@@ -138,4 +141,4 @@ $THEME->editor_sheets = array('editor');
 
 // $THEME->plugins_exclude_sheets
 
-// $THEME->rendererfactory
+$THEME->rendererfactory = 'theme_overridden_renderer_factory';

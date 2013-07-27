@@ -136,7 +136,6 @@ echo $OUTPUT->doctype() ?>
     <?php } ?>
 
 </div> <!-- END #page -->
-
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 </body>
 </html>

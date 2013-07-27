@@ -1,4 +1,7 @@
-
+/* Flexbox settings for layout of page - including fallbacks to prior versions
+ * for older browsers where appropriate
+ * --------------------------------------------------------------------------- */
+ 
 #outerwrapper {
     display: -webkit-box;
     display:    -moz-box;
@@ -69,8 +72,9 @@
     min-width:180px;
 }
 
-/* Optional column orders
- * To use these change the Class in the outerwrapper div to the appropriate name */
+/* Optional column orders for alternative layouts - preparation and testing for future settings page
+ * To use these change the Class in the outerwrapper div to the appropriate name 
+ * ------------------------------------------------------------------------------------------------- */
     #outerwrapper.threecolhg section.main {
         -webkit-order: 2;
        -ms-flex-order: 2;
@@ -116,9 +120,21 @@
        -ms-flex-order: 3;
                 order: 3;
     }
+    
+/* Side pre/post only and content only - do not display sections
+ * ------------------------------------------------------------- */
+.side-pre-only #outerwrapper aside.post {
+    display:none;
+}
+.side-post-only #outerwrapper aside.pre {
+    display:none;
+}
+.content-only #outerwrapper aside.pre, .content-only #outerwrapper aside.post {
+    display:none;
+}
 
-/* Too narrow to support three columns. */
-
+/* Media calls where screen width is too narrow to support three columns.
+ * ---------------------------------------------------------------------- */
 @media all and (max-width: 960px) { 
 /*Note firefox does not currently support flex-wrap, so this is ignored in FF.
  *It causes the 3rd column to wrap below the others in Chrome and IE. For
@@ -135,7 +151,7 @@
 @media all and (max-width: 720px) {
 /*Because of the lack of support for flex-wrap in FF, the simplest solution 
  *to bring the areas back in below each other is simply to override the 
- *flexbox layout and display using display:block */
+ *flexbox layout and display using display:block. */
     #outerwrapper {
         display:block;
     }
