@@ -14,7 +14,9 @@ $THEME->parents_exclude_sheets  = array(
 );
 
 $THEME->sheets = array(
-    'flex',
+    'normalise',
+    'core',
+    'flex2',
 );
 
 $THEME->layouts = array(
